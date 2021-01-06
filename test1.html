@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .wrap {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        /* 超出範圍換行 */
+        justify-content: space-around;
+        /* 水平分散對齊 */
+        align-items: center;
+        /* 垂直置中對齊 */
+      }
+
+      .box {
+        width: 300px;
+        margin: 20px;
+        padding-top: 250px;
+        background: url(https://upload.cc/i1/2021/01/01/crWRoE.jpg) no-repeat
+          50% -300%/100%;
+        box-shadow: 0 0 5px 1px #999;
+        transition: 0.5s;
+      }
+      .box-content {
+        position: relative;
+        padding: 20px;
+        text-align: center;
+        background-color: #fff;
+      }
+      .box-content h2 {
+        font-size: 40px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #888;
+      }
+      .box-content p {
+        font-style: 20px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
+      .box-content:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 60px solid transparent;
+        border-left: 150px solid #fff;
+        border-right: 150px solid #fff;
+        transform: translateY(-100%);
+      }
+      .box:hover {
+        background-position: 50% 0%;
+        transform: translateY(-50px);
+      }
+
+      .box:nth-child(1):hover .box-content {
+        background: linear-gradient(0deg, #00e4ff, #69ff97);
+      }
+      .box:nth-child(1):hover .box-content:before {
+        border-left: 150px solid #69ff97;
+        border-right: 150px solid #69ff97;
+      }
+
+      .box:nth-child(2):hover .box-content {
+        background: linear-gradient(0deg, #fb8076, #feb85d);
+      }
+      .box:nth-child(2):hover .box-content:before {
+        border-left: 150px solid #feb85d;
+        border-right: 150px solid #feb85d;
+      }
+
+      .box:nth-child(3):hover .box-content {
+        background: linear-gradient(0deg, #2f4858, #2fab8f);
+      }
+      .box:nth-child(3):hover .box-content:before {
+        border-left: 150px solid #2fab8f;
+        border-right: 150px solid #2fab8f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box">
+        <div class="box-content">
+          <h2>Default</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            consequatur iusto impedit temporibus molestiae vitae! Totam
+            eligendi, quasi sed eos eius repellat, modi ipsum rerum dolore
+            consequatur quisquam atque dolores.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-content">
+          <h2>Default</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            consequatur iusto impedit temporibus molestiae vitae! Totam
+            eligendi, quasi sed eos eius repellat, modi ipsum rerum dolore
+            consequatur quisquam atque dolores.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-content">
+          <h2>Default</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            consequatur iusto impedit temporibus molestiae vitae! Totam
+            eligendi, quasi sed eos eius repellat, modi ipsum rerum dolore
+            consequatur quisquam atque dolores.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
