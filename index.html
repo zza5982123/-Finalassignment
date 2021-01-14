@@ -121,7 +121,7 @@
       }
       /* 因為權重比較小所以這邊我們使用強制覆蓋 */
       .zoom .mask {
-        background: url(/images/zoom-in.png) no-repeat center center;
+        background: url(./images/zoom-in.png) no-repeat center center;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -216,12 +216,10 @@
 
       /* 師資介紹 */
       .teacher {
-        width: 100vw;
-        height: 100vh;
         display: flex;
         flex-wrap: wrap;
         /* 超出範圍換行 */
-        justify-content: space-around;
+        justify-content: center;
         /* 水平分散對齊 */
         align-items: center;
         /* 垂直置中對齊 */
@@ -230,7 +228,7 @@
         width: 300px;
         margin: 20px;
         padding-top: 260px;
-        background: url(/images/teacher-1.jpg) no-repeat 50% -300%/100%;
+        background: url(./images/teacher-1.jpg) no-repeat 50% -300%/100%;
         /*背景屬性 background: color image attachment repeat poition / size
       斜線是用來區分 背景位置background-position 與 背景大小background-size  */
         box-shadow: 0 0 5px 1px #999;
@@ -295,10 +293,21 @@
         border-left: 150px solid #2fab8f;
         border-right: 150px solid #2fab8f;
       }
+      .teacher_style {
+        background-image: linear-gradient(
+          44.8deg,
+          rgba(255, 136, 102, 0.67) -53.1%,
+          rgba(255, 221, 136, 0.28) 49%
+        );
+        padding: 20px 0;
+        margin: 20px 0;
+      }
       /* 頁尾 */
       .footer {
         text-align: center;
         background-color: #2fab8f;
+        padding: 10px;
+        font-size: 20px;
       }
     </style>
 
@@ -524,34 +533,33 @@
     </div>
 
     <!-- 師資介紹 -->
-    <div class="container-fluid">
-      <div class="text-center display-4 mb-5">
+    <div class="container-fluid teacher_style">
+      <div class="text-center display-4 mb-5 mt-4">
         <span style="padding-bottom: 4px; border-bottom: 3px solid #00b0a0"
           >師資介紹</span
         >
       </div>
-      <div class="row">
-        <div class="teacher">
-          <div class="teacher_box">
-            <div class="teacher_contant">
-              <h2>X老師</h2>
-              <p>學歷:XX大學博士</p>
-              <p>專長:UI/UX設計、畫畫</p>
-            </div>
+
+      <div class="teacher">
+        <div class="teacher_box">
+          <div class="teacher_contant">
+            <h2>X老師</h2>
+            <p>學歷:XX大學博士</p>
+            <p>專長:UI/UX設計、畫畫</p>
           </div>
-          <div class="teacher_box">
-            <div class="teacher_contant">
-              <h2>Y老師</h2>
-              <p>學歷:YY大學博士</p>
-              <p>專長:程式設計</p>
-            </div>
+        </div>
+        <div class="teacher_box">
+          <div class="teacher_contant">
+            <h2>Y老師</h2>
+            <p>學歷:YY大學博士</p>
+            <p>專長:程式設計</p>
           </div>
-          <div class="teacher_box">
-            <div class="teacher_contant">
-              <h2>Z老師</h2>
-              <p>學歷:ZZ大學博士</p>
-              <p>專長:精通各國語言</p>
-            </div>
+        </div>
+        <div class="teacher_box">
+          <div class="teacher_contant">
+            <h2>Z老師</h2>
+            <p>學歷:ZZ大學博士</p>
+            <p>專長:精通各國語言</p>
           </div>
         </div>
       </div>
@@ -564,18 +572,20 @@
           >關於我們</span
         >
       </div>
-      <div class="row">
-        <div class="about">
-          <div class="about_item">
-            <div class="about_txt">
-              <p>
-                NEVER幼稚園成立於2006年，依托多位國內外多位專業教師所成立的國際標準幼稚園。成立以来，经过近十二年的努力，
-                已成為享譽國際的幼稚園，每年更聘請世界頂尖網頁設計師、程式設計師、藝術大師、奧斯卡及紅點設計獲獎者來講學及交流，
-                國際的學術交往。經過近十二年的努力，率先建立起與國際接軌的教育模式，引進歐美頂級院校的課程體系，由專業的國際教師團，培養出符合國際一流藝術院校標準的人才，成為國內幼稚園學生通向國際院校最更有效的通道。
-              </p>
-            </div>
-            <div class="pic">
-              <img src="./images/card_WebDesign.jpg" alt="" />
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="about">
+            <div class="about_item">
+              <div class="about_txt">
+                <p>
+                  NEVER幼稚園成立於2006年，依托多位國內外多位專業教師所成立的國際標準幼稚園。成立以来，经过近十二年的努力，
+                  已成為享譽國際的幼稚園，每年更聘請世界頂尖網頁設計師、程式設計師、藝術大師、奧斯卡及紅點設計獲獎者來講學及交流，
+                  國際的學術交往。經過近十二年的努力，率先建立起與國際接軌的教育模式，引進歐美頂級院校的課程體系，由專業的國際教師團，培養出符合國際一流藝術院校標準的人才，成為國內幼稚園學生通向國際院校最更有效的通道。
+                </p>
+              </div>
+              <div class="pic">
+                <img src="./images/card_WebDesign.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
